@@ -25,16 +25,26 @@
               "angle": 0,
               "id": "bbdc5a3e-dbb2-4bb8-a73a-2b9dd442cda8",
               "z": 1,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Using weak and un-unique passwords which can lead to unauthorized access.",
+                  "title": "Weak Passwords",
+                  "type": "Information disclosure",
+                  "mitigation": "1. Multi-Factor Authentication\n2. Create unique and lengthy passwords\n3. Change password every 6 months"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Client Browser"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -51,16 +61,34 @@
               "angle": 0,
               "id": "b84e2278-0cf7-46ec-a11d-2f583ef2c2d6",
               "z": 2,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "Neglecting authentication credentials or authentication cookies over unencrypted network links, which can lead to credential or session attacks.",
+                  "title": "Neglecting authentication credentials/cookies",
+                  "mitigation": "1. Screen for exposed credentials\n2. leverage adaptive authentication\n3. Track traffic on site",
+                  "type": "Spoofing"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Security Misconfiguration",
+                  "description": "Revealing error handling information to the attackers such as stack traces along with not changing default keys and​ passwords",
+                  "mitigation": "1. Create a 'build and deploy' process, which can run a test on deployment​.",
+                  "type": "Information disclosure"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Web Server"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -77,16 +105,33 @@
               "angle": 0,
               "id": "d6953c88-96c1-49ff-b80f-33a4817e98b6",
               "z": 3,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Cross-site scripting SQL injection",
+                  "description": "Using poor/weak data validation that leads to cross-site scripting SQL injection from destroying the SQL Database",
+                  "mitigation": "1. Sanitize all user-supplied data in order to remove character string that could e executed as SQL commands\n2. Strong data validation by limiting format, length,  and other structures of permissible inputs. \n3. Avoiding unsecured URL parameters\n4. Limiting the scope of SQL Commands\n2. Don't return HTML tags to the​ client.",
+                  "type": "Tampering"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "Using unstable and insecure data access coding techniques, which can increase the threat posed by SQL injection.",
+                  "title": "Unstable and insecure data",
+                  "type": "Tampering"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "SQL Database"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
