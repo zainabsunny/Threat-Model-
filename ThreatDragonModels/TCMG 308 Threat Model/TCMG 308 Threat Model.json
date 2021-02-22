@@ -34,6 +34,14 @@
                   "title": "Weak Passwords",
                   "type": "Information disclosure",
                   "mitigation": "1. Multi-Factor Authentication\n2. Create unique and lengthy passwords\n3. Change password every 6 months"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "The attacker obtains authentication credentials by monitoring the network with the use of network monitoring software.",
+                  "title": "Web application user authentication process",
+                  "mitigation": "Use SSL to provide an ​encrypted channel",
+                  "type": "Information disclosure"
                 }
               ],
               "attrs": {
