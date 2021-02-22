@@ -30,7 +30,7 @@
                 {
                   "status": "Open",
                   "severity": "Medium",
-                  "description": "Using weak and un-unique passwords which can lead to unauthorized access.",
+                  "description": "Using weak and un-unique passwords which can lead to unauthorized access. Using weak passwords and account policies that lead to password cracking, identity spoofing, and denial of service attacks if accounts can be locked out deliberately.",
                   "title": "Weak Passwords",
                   "type": "Information disclosure",
                   "mitigation": "1. Multi-Factor Authentication\n2. Create unique and lengthy passwords\n3. Change password every 6 months"
@@ -129,6 +129,14 @@
                   "description": "Using unstable and insecure data access coding techniques, which can increase the threat posed by SQL injection.",
                   "title": "Unstable and insecure data",
                   "type": "Tampering"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "Injection of SQL commands as the attacker appends SQL commands to user name, which is used to form a SQL query",
+                  "title": "Data access component",
+                  "mitigation": "Use a regular expression to validate the user name, and use a stored procedure that uses parameters to access the database.",
+                  "type": "Spoofing"
                 }
               ],
               "attrs": {
@@ -152,7 +160,12 @@
               "target": {
                 "id": "bbdc5a3e-dbb2-4bb8-a73a-2b9dd442cda8"
               },
-              "vertices": [],
+              "vertices": [
+                {
+                  "x": 308,
+                  "y": 305
+                }
+              ],
               "id": "54881a55-3bce-4eea-ac73-f020570c3df2",
               "labels": [
                 {
@@ -167,13 +180,23 @@
                 }
               ],
               "z": 5,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "Passing session identifiers or cookies over unencrypted network channels. This can lead to IP session hijacking.",
+                  "title": "Session identifiers or cookies",
+                  "mitigation": "Add secure Flag",
+                  "type": "Information disclosure"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
@@ -201,13 +224,23 @@
                 }
               ],
               "z": 6,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "mitigation": "Anonymous Authentication should be disabled on all SQL Server Reporting Services instance",
+                  "description": "Allowing unauthenticated anonymous access. When Anonymous Authentication is enabled, anyone who connects to the reporting services instance will have access to the reports that are configured to be viewed by the account to which the Anonymous Authentication account is mapped.",
+                  "title": "Unauthenticated access",
+                  "type": "Tampering"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
