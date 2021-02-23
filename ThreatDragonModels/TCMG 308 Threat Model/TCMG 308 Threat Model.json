@@ -185,10 +185,18 @@
                 {
                   "status": "Open",
                   "severity": "High",
-                  "description": "Passing session identifiers or cookies over unencrypted network channels. This can lead to IP session hijacking.",
-                  "title": "Session identifiers or cookies",
-                  "mitigation": "Add secure Flag",
-                  "type": "Information disclosure"
+                  "title": "Clickjacking",
+                  "description": "When an attacker injects transparent or opaque objects into your web application",
+                  "type": "Tampering",
+                  "mitigation": "X-Frame-Options header"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "The attacker impersonates an authorized user and makes requests on their behalf, like resetting a password​ or updating an email address.\n\nCross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they’re currently authenticated. With a little help of social engineering (such as sending a link via email or chat), an attacker may trick the users of a web application into executing actions of the attacker’s choosing. If the victim is a normal user, a successful CSRF attack can force the user to perform state-changing requests like transferring funds, changing their email address, and so forth. If the victim is an administrative account, CSRF can compromise the entire web application.",
+                  "title": "Cross Site Request Forgery",
+                  "type": "Information disclosure",
+                  "mitigation": "1. Check if your framework has built-in CSRF protection and use it\n2. Always use SameSite Cookie Attribute for session cookies"
                 }
               ],
               "attrs": {
@@ -233,6 +241,14 @@
                   "description": "Allowing unauthenticated anonymous access. When Anonymous Authentication is enabled, anyone who connects to the reporting services instance will have access to the reports that are configured to be viewed by the account to which the Anonymous Authentication account is mapped.",
                   "title": "Unauthenticated access",
                   "type": "Tampering"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "Passing session identifiers or cookies over unencrypted network channels. This can lead to IP session hijacking.",
+                  "title": "Session identifiers or cookies",
+                  "type": "Information disclosure",
+                  "mitigation": "Add Secure Flag"
                 }
               ],
               "attrs": {
