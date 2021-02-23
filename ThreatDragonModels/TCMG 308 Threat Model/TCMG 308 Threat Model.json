@@ -29,7 +29,7 @@
               "threats": [
                 {
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "description": "Using weak and un-unique passwords which can lead to unauthorized access. Using weak passwords and account policies that lead to password cracking, identity spoofing, and denial of service attacks if accounts can be locked out deliberately.",
                   "title": "Weak Passwords",
                   "type": "Information disclosure",
@@ -197,6 +197,14 @@
                   "title": "Cross Site Request Forgery",
                   "type": "Information disclosure",
                   "mitigation": "1. Check if your framework has built-in CSRF protection and use it\n2. Always use SameSite Cookie Attribute for session cookies"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Broken Authentication",
+                  "description": "Session hijacking might be possible, timeouts not implemented right or using HTTP  so no SSL Security",
+                  "type": "Information disclosure",
+                  "mitigation": "Implement a Framework"
                 }
               ],
               "attrs": {
