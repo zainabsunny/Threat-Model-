@@ -205,6 +205,14 @@
                   "description": "Session hijacking might be possible, timeouts not implemented right or using HTTP  so no SSL Security",
                   "type": "Information disclosure",
                   "mitigation": "Implement a Framework"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "The client and server could use the session key to encrypt all further communications which can be weak or custom encryption and fail to adequately secure encryption keys.",
+                  "title": "Weak or custom encryption",
+                  "mitigation": "Identify all web servers and services that need to be encrypted, and get certificates.",
+                  "type": "Spoofing"
                 }
               ],
               "attrs": {
